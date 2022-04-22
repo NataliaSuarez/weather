@@ -10,8 +10,7 @@ import WaterIcon from '@mui/icons-material/Water';
 import AirIcon from '@mui/icons-material/Air';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 
-import TypographyTheme from './Typography';
-import { useWeather } from '../api/weatherByCity';
+import { useWeather } from '../../api/weatherByCity';
 
 
 const Container = styled('div')(({ theme }) => ({

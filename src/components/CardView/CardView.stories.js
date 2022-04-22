@@ -1,4 +1,4 @@
-import CardView from './CardView';
+import CardView from '.';
 
 export default {
   title: 'Common/CardView',

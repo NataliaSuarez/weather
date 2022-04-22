@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import theme from './theme';
 import Main from './components/Main';
 
+/** Query Client is useful for caching API data  */
 const queryClient = new QueryClient();
 
 const Container = styled('div')(({ theme }: any) => ({
@@ -18,6 +19,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
+        {/* Theme of material ui with styles */}
         <Container>
           <Main />
         </Container>
