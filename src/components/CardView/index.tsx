@@ -113,6 +113,16 @@ const ClockChip = styled('div')`
   gap: 4px;
 `;
 
+const ErrorMessage = styled('div')(({ theme }) => ({
+  color: '#4d6787c9',
+  display: 'flex',
+  gap: '6px',
+  flexDirection: 'row',
+  alignItems: 'center',
+  fontSize: '14px',
+  paddingBottom: '12px'
+}));
+
 type CardViewProps = {
   city: string | null;
 }
@@ -120,7 +130,9 @@ type CardViewProps = {
 const CardView = ({ city }: CardViewProps) => {
   const { isLoading, error, data } = useWeather(city);
 
-  if (isLoading || error || !data) return (<Container></Container>);
+  if (isLoading || error || !data || data?.error) return (<Container>
+    <ErrorMessage>Oops! We have API's fails. </ErrorMessage>
+  </Container>);
 
   return (
     <Container>
