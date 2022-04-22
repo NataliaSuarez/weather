@@ -19,7 +19,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        {/* Theme of material ui with styles */}
         <Container>
           <Main />
         </Container>
