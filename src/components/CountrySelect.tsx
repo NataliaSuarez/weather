@@ -25,7 +25,6 @@ const CountrySelect = ({ handleChange }: CountrySelectProps) => {
   }));
 
   const handleChangeCountry = (event: any, value: any, reason: string) => {
-    console.log(value);
     if (reason === 'selectOption') handleChange(value);
     if (reason === 'clear' || reason === 'removeOption') handleChange({ value: '', key: 'AR' });
   }

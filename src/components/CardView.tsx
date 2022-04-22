@@ -28,7 +28,6 @@ const Chip = styled('div')`
   border-radius: 4px;
   text-transform: uppercase;
   width: fit-content;
-  padding: 4px;
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -45,7 +44,7 @@ const FirstDetails = styled('div')`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 18px;
 `;
 
 const ChipsContainer = styled('div')`
@@ -57,7 +56,7 @@ const ChipsContainer = styled('div')`
 
 const BackgroundContainer = styled('div')`
   background-color: #a8b2bd;
-  padding: 24px 24px 32px 24px;
+  padding: 18px;
   display: flex;
   gap: 12px;
   flex-flow: wrap;
@@ -121,7 +120,6 @@ type CardViewProps = {
 
 const CardView = ({ city }: CardViewProps) => {
   const { isLoading, error, data } = useWeather(city);
-  console.log('all', data);
 
   if (isLoading || error || !data) return (<Container></Container>);
 

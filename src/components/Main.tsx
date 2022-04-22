@@ -36,6 +36,7 @@ const Header = styled('div')(({ theme }) => ({
 const TitleApp = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
   padding: theme.spacing(2),
+  fontSize: '32px',
   display: 'flex',
   gap: '8px',
   flexDirection: 'row',
@@ -80,7 +81,7 @@ const Main = () => {
     <Paper>
       <Container>
         <Header>
-          <TitleApp variant='h2'>
+          <TitleApp>
             Weather&Clock
             <img src={Cloud} width="72px" />
           </TitleApp>
