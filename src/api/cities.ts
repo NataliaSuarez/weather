@@ -4,7 +4,7 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Host': 'countries-cities.p.rapidapi.com',
-		'X-RapidAPI-Key': '5c1b42bfcdmsh059fc45b08c2c34p1878c9jsn3709c2d0b161'
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY_LOCATION || '',
 	}
 };
 

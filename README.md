@@ -14,6 +14,9 @@
 - [rapidapi](rapidapi.com): The autocomplete selectors use cities and countries, they are queried to a rapidapi api
 - [weather api](weatherapi.com): weather by city
 
+To use api you need to set variables in .env
+REACT_APP_API_KEY_WEATHER=your_api_key
+REACT_APP_API_KEY_LOCATION=your_api_key
 
 ### `npm start`
 
