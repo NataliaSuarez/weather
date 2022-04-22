@@ -130,6 +130,10 @@ type CardViewProps = {
 const CardView = ({ city }: CardViewProps) => {
   const { isLoading, error, data } = useWeather(city);
 
+  if (city === null) return (<Container>
+    <ErrorMessage>No city selected.</ErrorMessage>
+  </Container>);
+
   if (isLoading || error || !data || data?.error) return (<Container>
     <ErrorMessage>Oops! We have API's fails. </ErrorMessage>
   </Container>);
